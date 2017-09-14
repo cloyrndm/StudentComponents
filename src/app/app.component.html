@@ -1,0 +1,42 @@
+<div>
+<input></input>
+</div>
+
+<!-- 
+ <div id = "options"> -->
+<!-- <button id = "addStudents" (click)="addStudentEntry()">
+Add Student Entry
+</button>
+<button id = "listStudents" (click)="listStudents()">
+List Students
+</button> 
+<app-btn-and-print></app-btn-and-print> -->
+<div>
+<btn></btn>
+</div>
+<!-- </div> -->
+<div>
+{{messages}}
+</div>
+<div *ngIf="printing">
+<table>
+<thead>
+<tr>
+<th> Student Number </th>
+<th> First Name </th>
+<th> Last Name </th>
+<th> Program Enrolled </th>
+<th> Year </th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor = "let studentRecord of studentCollection">
+<td>{{studentRecord.studNumber}} </td>
+<td>{{studentRecord.studFirstName}} </td>
+<td>{{studentRecord.studLastName}} </td>
+<td>{{studentRecord.studProgram}} </td>
+<td>{{studentRecord.studYear}} </td>
+</tr>
+</tbody>
+</table>
+</div>
